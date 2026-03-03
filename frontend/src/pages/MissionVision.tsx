@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { useLanguageStore } from '@/store'
 import { Link } from 'react-router-dom'
-import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
+import { ArrowRightIcon, ArrowLeftIcon, BuildingOffice2Icon, WrenchScrewdriverIcon, TruckIcon, SparklesIcon, CogIcon, Square3Stack3DIcon } from '@heroicons/react/24/outline'
 
 const MissionVision = () => {
   const { language } = useLanguageStore()
@@ -11,15 +11,15 @@ const MissionVision = () => {
   const fadeInUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }
 
   const mainServices = [
-    { icon: '', title: language === 'ar' ? 'المشاريع الكبرى' : 'Epic Projects', description: language === 'ar' ? 'تنفيذ المشاريع الضخمة والمعقدة في قطاع الطاقة بأعلى معايير الجودة والسلامة' : 'Execution of large-scale and complex projects in the energy sector with the highest quality and safety standards', color: 'from-secondary-500 to-secondary-600' },
-    { icon: '', title: language === 'ar' ? 'الصيانة' : 'Maintenance', description: language === 'ar' ? 'خدمات صيانة شاملة ووقائية لضمان استمرارية العمليات وتقليل فترات التوقف' : 'Comprehensive and preventive maintenance services to ensure operational continuity and minimize downtime', color: 'from-primary-500 to-primary-600' },
-    { icon: '', title: language === 'ar' ? 'اللوجستيات' : 'Logistics', description: language === 'ar' ? 'حلول لوجستية متكاملة لنقل المعدات والمواد بكفاءة وأمان' : 'Integrated logistics solutions for efficient and safe transportation of equipment and materials', color: 'from-secondary-500 to-secondary-600' },
-    { icon: '', title: language === 'ar' ? 'التنظيف الصناعي' : 'Industrial Cleaning', description: language === 'ar' ? 'خدمات تنظيف صناعي متخصصة باستخدام أحدث التقنيات والمعدات' : 'Specialized industrial cleaning services using the latest technologies and equipment', color: 'from-primary-500 to-primary-600' }
+    { icon: <BuildingOffice2Icon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? 'المشاريع الكبرى' : 'Epic Projects', description: language === 'ar' ? 'تنفيذ المشاريع الضخمة والمعقدة في قطاع الطاقة بأعلى معايير الجودة والسلامة' : 'Execution of large-scale and complex projects in the energy sector with the highest quality and safety standards', color: 'from-secondary-500 to-secondary-600' },
+    { icon: <WrenchScrewdriverIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'الصيانة' : 'Maintenance', description: language === 'ar' ? 'خدمات صيانة شاملة ووقائية لضمان استمرارية العمليات وتقليل فترات التوقف' : 'Comprehensive and preventive maintenance services to ensure operational continuity and minimize downtime', color: 'from-primary-500 to-primary-600' },
+    { icon: <TruckIcon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? 'اللوجستيات' : 'Logistics', description: language === 'ar' ? 'حلول لوجستية متكاملة لنقل المعدات والمواد بكفاءة وأمان' : 'Integrated logistics solutions for efficient and safe transportation of equipment and materials', color: 'from-secondary-500 to-secondary-600' },
+    { icon: <SparklesIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'التنظيف الصناعي' : 'Industrial Cleaning', description: language === 'ar' ? 'خدمات تنظيف صناعي متخصصة باستخدام أحدث التقنيات والمعدات' : 'Specialized industrial cleaning services using the latest technologies and equipment', color: 'from-primary-500 to-primary-600' }
   ]
 
   const additionalServices = [
-    { icon: '', title: language === 'ar' ? 'المساعدة الفنية' : 'Technical Assistance', description: language === 'ar' ? 'دعم فني متخصص واستشارات هندسية لمساعدتكم في تحقيق أهدافكم التشغيلية' : 'Specialized technical support and engineering consultations to help you achieve your operational goals' },
-    { icon: '', title: language === 'ar' ? 'خدمات أخرى' : 'Other Services', description: language === 'ar' ? 'مجموعة متنوعة من الخدمات المتخصصة لتلبية احتياجاتكم الفريدة في قطاع الطاقة' : 'A variety of specialized services to meet your unique needs in the energy sector' }
+    { icon: <CogIcon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? 'المساعدة الفنية' : 'Technical Assistance', description: language === 'ar' ? 'دعم فني متخصص واستشارات هندسية لمساعدتكم في تحقيق أهدافكم التشغيلية' : 'Specialized technical support and engineering consultations to help you achieve your operational goals' },
+    { icon: <Square3Stack3DIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'خدمات أخرى' : 'Other Services', description: language === 'ar' ? 'مجموعة متنوعة من الخدمات المتخصصة لتلبية احتياجاتكم الفريدة في قطاع الطاقة' : 'A variety of specialized services to meet your unique needs in the energy sector' }
   ]
 
   return (
