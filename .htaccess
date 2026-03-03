@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect /api requests to Laravel public_SS (keep /api prefix)
+    RewriteCond %{REQUEST_URI} ^/api
+    RewriteRule ^(.*)$ /public_SS/$1 [L]
+
+    # Redirect /storage requests to storage.php handler (for uploaded files)
+    # This handles the case where symlinks are not available on shared hosting
+    RewriteCond %{REQUEST_URI} ^/storage/(.+)$
+    RewriteRule ^storage/(.+)$ /public_SS/storage.php?file=$1 [L,QSA]
+
+    # Serve actual files (JS, CSS, images) from /public/react if they exist
+    RewriteCond %{REQUEST_URI} ^/public/react/
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f
+    RewriteRule ^ - [L]
+
+    # Serve actual files from root if they exist
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # For all other requests, serve the React SPA
+    RewriteCond %{REQUEST_URI} !^/api
+    RewriteCond %{REQUEST_URI} !^/storage
+    RewriteCond %{REQUEST_URI} !^/public_SS
+    RewriteRule ^ /public/react/index.html [L]
+</IfModule>
+
+# Fallback DirectoryIndex
+DirectoryIndex /public/react/index.html
