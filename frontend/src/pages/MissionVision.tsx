@@ -31,8 +31,13 @@ const MissionVision = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-dots opacity-20" />
+        {/* Oil Field Background Image - Pumpjack */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        {/* Dark Gradient Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/30" />
         <motion.div className="absolute top-20 left-10 w-96 h-96 bg-secondary-500/10 rounded-full blur-[100px]" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 8, repeat: Infinity }} />
         <motion.div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-400/10 rounded-full blur-[100px]" animate={{ y: [0, -30, 0] }} transition={{ duration: 10, repeat: Infinity }} />
 
@@ -50,7 +55,7 @@ const MissionVision = () => {
 
       {/* Hero Image */}
       <section className="relative h-80 md:h-96">
-        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-900/40 via-transparent to-neutral-50 dark:to-neutral-950" />
       </section>
 

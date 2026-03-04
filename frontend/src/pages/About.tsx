@@ -31,8 +31,13 @@ const About = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-dots opacity-20" />
+        {/* Oil Field Background Image - Pumpjack */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        {/* Dark Gradient Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/30" />
         <motion.div className="absolute top-20 right-10 w-96 h-96 bg-secondary-500/10 rounded-full blur-[100px]" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 8, repeat: Infinity }} />
 
         <div className="container-custom relative z-10">
@@ -79,7 +84,7 @@ const About = () => {
                   </div>
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-3xl blur-2xl" />
-                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" className="relative rounded-3xl shadow-2xl" />
+                    <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" className="relative rounded-3xl shadow-2xl" />
                   </div>
                 </div>
               </motion.div>
@@ -88,7 +93,7 @@ const About = () => {
             {activeTab === 'mission' && (
               <motion.div key="mission" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="max-w-6xl mx-auto">
                 <div className="rounded-3xl overflow-hidden shadow-xl mb-16">
-                  <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="" className="w-full h-80 object-cover" />
+                  <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="" className="w-full h-80 object-cover" />
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="card-glass p-10 relative overflow-hidden group">
@@ -118,7 +123,7 @@ const About = () => {
                   </div>
                   <div className="order-1 lg:order-2 relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-3xl blur-2xl" />
-                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" className="relative rounded-3xl shadow-2xl" />
+                    <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" className="relative rounded-3xl shadow-2xl" />
                   </div>
                 </div>
 

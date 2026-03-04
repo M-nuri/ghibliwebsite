@@ -29,8 +29,13 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-dots opacity-20" />
+        {/* Oil Field Background Image - Pumpjack */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        {/* Dark Gradient Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/30" />
         <motion.div className="absolute top-20 left-10 w-[500px] h-[500px] bg-secondary-500/10 rounded-full blur-[100px]" animate={{ y: [0, 50, 0], scale: [1, 1.1, 1] }} transition={{ duration: 10, repeat: Infinity }} />
         <motion.div className="absolute bottom-20 right-10 w-[600px] h-[600px] bg-primary-400/10 rounded-full blur-[100px]" animate={{ y: [0, -30, 0], scale: [1, 0.9, 1] }} transition={{ duration: 8, repeat: Infinity }} />
 
@@ -46,7 +51,7 @@ const Home = () => {
                 {language === 'ar' ? 'غيبلي للطاقة' : 'Ghibli Energy'}
               </motion.h1>
 
-              <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-white/70 mb-4 leading-relaxed max-w-xl">
+              <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-white/80 mb-4 leading-relaxed max-w-xl">
                 {language === 'ar' ? 'حلول طاقة متكاملة للمستقبل' : 'Integrated Energy Solutions for Tomorrow'}
               </motion.p>
 
@@ -68,7 +73,7 @@ const Home = () => {
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="hidden lg:block">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-3xl blur-2xl" />
-                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={language === 'ar' ? 'حقل غاز' : 'Gas Field'} className="relative rounded-3xl shadow-2xl w-full aspect-[4/3] object-cover" />
+                <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={language === 'ar' ? 'منصة نفطية' : 'Offshore Oil Platform'} className="relative rounded-3xl shadow-2xl w-full aspect-[4/3] object-cover" />
               </div>
             </motion.div>
           </div>
@@ -107,12 +112,12 @@ const Home = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="" className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="" className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="" className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="" className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-3xl p-6 text-white">
                     <p className="text-4xl font-bold mb-1">100%</p>
