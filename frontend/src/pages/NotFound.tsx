@@ -14,8 +14,13 @@ const NotFound = () => {
         <title>404 - {language === 'ar' ? settings.site_name_ar : settings.site_name}</title>
       </Helmet>
 
-      <section className="min-h-screen flex items-center justify-center py-20">
-        <div className="container-custom">
+      <section className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-neutral-100/95 dark:from-neutral-950/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
+        <div className="container-custom relative">
           <motion.div
             className="max-w-lg mx-auto text-center"
             initial={{ opacity: 0, y: 30 }}

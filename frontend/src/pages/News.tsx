@@ -212,7 +212,13 @@ const News = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-primary overflow-hidden">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="container-custom relative z-10">
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -233,8 +239,14 @@ const News = () => {
       </section>
 
       {/* Filters */}
-      <section className="py-8 bg-neutral-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
-        <div className="container-custom">
+      <section className="py-8 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-neutral-50/95 dark:bg-neutral-900/95" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 dark:bg-neutral-800" />
+        <div className="container-custom relative">
           <div className="flex flex-col md:flex-row gap-4">
             {/* Search */}
             <div className="flex-1 relative">
@@ -272,11 +284,16 @@ const News = () => {
       </section>
 
       {/* News Grid */}
-      <section className="section">
-        <div className="container-custom">
+      <section className="section relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-neutral-100/95 dark:from-neutral-950/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
+        <div className="container-custom relative">
           {/* Error Message */}
           {error && !loading && (
-            <div className="mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg text-center">
+            <div className="mb-8 p-6 bg-amber-50/90 dark:bg-amber-900/30 backdrop-blur-sm border border-amber-200 dark:border-amber-800 rounded-lg text-center">
               <p className="text-amber-700 dark:text-amber-400 text-lg mb-4">{error}</p>
               <p className="text-neutral-600 dark:text-neutral-400 mb-4">
                 {language === 'ar'

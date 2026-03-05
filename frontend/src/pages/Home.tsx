@@ -87,8 +87,12 @@ const Home = () => {
       </section>
 
       {/* About Preview */}
-      <section className="section bg-white dark:bg-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-mesh" />
+      <section className="section relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-neutral-100/95 dark:from-neutral-900/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
         <div className="container-custom relative">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeft} transition={{ duration: 0.6 }}>
@@ -131,8 +135,12 @@ const Home = () => {
       </section>
 
       {/* Services */}
-      <section className="section bg-neutral-50 dark:bg-neutral-950 relative">
-        <div className="absolute inset-0 bg-grid" />
+      <section className="section relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/95 via-neutral-100/90 to-white/95 dark:from-neutral-950/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
         <div className="container-custom relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-20">
             <span className="badge-secondary mb-6">{language === 'ar' ? 'ما نقدمه' : 'What We Offer'}</span>
@@ -143,7 +151,7 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group">
-                <div className="card-hover p-8 h-full bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800">
+                <div className="card-hover p-8 h-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-100 dark:border-neutral-800">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary-100 to-secondary-50 dark:from-secondary-900/30 dark:to-secondary-800/20 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
@@ -157,8 +165,13 @@ const Home = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots opacity-10" />
+      <section className="py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/20" />
         <motion.div className="absolute top-0 right-0 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 8, repeat: Infinity }} />
         <div className="container-custom relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="max-w-3xl mx-auto text-center">

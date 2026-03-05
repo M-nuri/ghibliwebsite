@@ -60,8 +60,13 @@ const MissionVision = () => {
       </section>
 
       {/* Main Services */}
-      <section className="section bg-neutral-50 dark:bg-neutral-950 -mt-20 relative z-10">
-        <div className="container-custom">
+      <section className="section relative z-10 -mt-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/95 via-neutral-100/90 to-white/95 dark:from-neutral-950/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
+        <div className="container-custom relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
             <span className="badge-secondary mb-6">{language === 'ar' ? 'ما نقدمه' : 'What We Offer'}</span>
             <h2 className="section-title dark:text-white mb-6">{language === 'ar' ? 'خدماتنا الرئيسية' : 'Our Core Services'}</h2>
@@ -71,7 +76,7 @@ const MissionVision = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {mainServices.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group">
-                <div className="card-hover p-10 h-full bg-white dark:bg-neutral-900 relative overflow-hidden">
+                <div className="card-hover p-10 h-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm relative overflow-hidden">
                   <div className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${service.color}`} />
                   <div className={`absolute -top-20 -right-20 w-48 h-48 bg-gradient-to-br ${service.color} opacity-5 rounded-full blur-2xl group-hover:opacity-10 transition-opacity duration-500`} />
                   <div className="relative">
@@ -89,13 +94,23 @@ const MissionVision = () => {
       </section>
 
       {/* Divider */}
-      <div className="container-custom">
-        <div className="h-px bg-gradient-to-r from-transparent via-secondary-500/30 to-transparent" />
+      <div className="relative">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/70 to-neutral-900/80" />
+        <div className="container-custom relative py-4">
+          <div className="h-px bg-gradient-to-r from-transparent via-secondary-500/50 to-transparent" />
+        </div>
       </div>
 
       {/* Additional Services */}
-      <section className="section bg-white dark:bg-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-mesh" />
+      <section className="section relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-neutral-100/95 dark:from-neutral-900/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
         <div className="container-custom relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
             <span className="badge-primary mb-6">{language === 'ar' ? 'المزيد من الخدمات' : 'More Services'}</span>
@@ -105,7 +120,7 @@ const MissionVision = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {additionalServices.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group">
-                <div className="card-glass p-10 h-full relative overflow-hidden">
+                <div className="card-glass p-10 h-full relative overflow-hidden bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm">
                   <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-secondary-500 to-primary-500 rounded-full" />
                   <div className="relative ps-4">
                     <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
@@ -120,8 +135,13 @@ const MissionVision = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots opacity-10" />
+      <section className="py-28 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/20" />
         <motion.div className="absolute top-10 right-10 w-96 h-96 bg-secondary-500/10 rounded-full blur-[100px]" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 10, repeat: Infinity }} />
         <motion.div className="absolute bottom-10 left-10 w-80 h-80 bg-primary-400/10 rounded-full blur-[100px]" animate={{ y: [0, 30, 0] }} transition={{ duration: 8, repeat: Infinity }} />
 

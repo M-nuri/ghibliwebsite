@@ -118,7 +118,13 @@ const NewsDetail = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-primary overflow-hidden">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-neutral-900/90" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="container-custom relative z-10">
           <motion.div
             className="max-w-4xl"
@@ -179,8 +185,13 @@ const NewsDetail = () => {
       </section>
 
       {/* Article Content */}
-      <section className="section">
-        <div className="container-custom">
+      <section className="section relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-neutral-100/95 dark:from-neutral-950/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
+        <div className="container-custom relative">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <motion.div

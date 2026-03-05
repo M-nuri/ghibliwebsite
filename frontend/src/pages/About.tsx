@@ -53,8 +53,14 @@ const About = () => {
       </section>
 
       {/* Tabs */}
-      <section className="sticky top-20 lg:top-24 z-40 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-2xl border-b border-neutral-200/50 dark:border-neutral-700/50">
-        <div className="container-custom">
+      <section className="sticky top-20 lg:top-24 z-40 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1578356058390-f58c575337a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-200/50 dark:bg-neutral-700/50" />
+        <div className="container-custom relative">
           <div className="flex justify-center overflow-x-auto scrollbar-hide py-2">
             <div className="inline-flex bg-neutral-100/80 dark:bg-neutral-800/80 rounded-full p-1.5">
               {tabs.map((tab) => (
@@ -70,8 +76,13 @@ const About = () => {
       </section>
 
       {/* Content */}
-      <section className="section bg-neutral-50 dark:bg-neutral-950">
-        <div className="container-custom">
+      <section className="section relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/95 via-neutral-100/90 to-white/95 dark:from-neutral-950/95 dark:via-neutral-900/90 dark:to-neutral-950/95" />
+        <div className="container-custom relative">
           <AnimatePresence mode="wait">
             {activeTab === 'about' && (
               <motion.div key="about" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="max-w-6xl mx-auto">
@@ -96,13 +107,13 @@ const About = () => {
                   <img src="https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="" className="w-full h-80 object-cover" />
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="card-glass p-10 relative overflow-hidden group">
+                  <div className="card-glass p-10 relative overflow-hidden group bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-500 to-secondary-400" />
                     <div className="absolute -top-20 -right-20 w-40 h-40 bg-secondary-500/10 rounded-full blur-2xl group-hover:bg-secondary-500/20 transition-colors" />
                     <h3 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 relative">{language === 'ar' ? 'رسالتنا' : 'MISSION'}</h3>
                     <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed relative">{language === 'ar' ? 'نسعى لتوفير حلول طاقة موثوقة ومستدامة تدعم التنمية الاقتصادية مع الحفاظ على البيئة. نلتزم بالتميز التشغيلي وأعلى معايير السلامة في جميع مراحل عملياتنا من الاستكشاف إلى التوزيع.' : 'We strive to provide reliable and sustainable energy solutions that support economic development while preserving the environment. We are committed to operational excellence and the highest safety standards throughout all stages of our operations from exploration to distribution.'}</p>
                   </div>
-                  <div className="card-glass p-10 relative overflow-hidden group">
+                  <div className="card-glass p-10 relative overflow-hidden group bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-primary-400" />
                     <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary-500/10 rounded-full blur-2xl group-hover:bg-primary-500/20 transition-colors" />
                     <h3 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 relative">{language === 'ar' ? 'رؤيتنا' : 'VISION'}</h3>
@@ -132,7 +143,7 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {values.map((value, index) => (
-                    <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="card-hover p-8 text-center group">
+                    <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="card-hover p-8 text-center group bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm">
                       <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
                       <h4 className="text-lg font-bold text-neutral-900 dark:text-white">{value.title}</h4>
                     </motion.div>
