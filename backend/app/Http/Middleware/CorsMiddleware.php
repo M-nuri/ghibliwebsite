@@ -18,6 +18,10 @@ class CorsMiddleware
 
         // Get allowed origins from environment or use defaults
         $allowedOrigins = [
+            'https://ghiblienergy.ly',
+            'http://ghiblienergy.ly',
+            'https://www.ghiblienergy.ly',
+            'http://www.ghiblienergy.ly',
             'https://unitedelite.ly',
             'http://unitedelite.ly',
             'https://www.unitedelite.ly',
@@ -34,7 +38,7 @@ class CorsMiddleware
         if ($origin && (in_array($origin, $allowedOrigins) || config('app.debug'))) {
             $response->headers->set('Access-Control-Allow-Origin', $origin);
         } else {
-            $response->headers->set('Access-Control-Allow-Origin', 'https://unitedelite.ly');
+            $response->headers->set('Access-Control-Allow-Origin', 'https://ghiblienergy.ly');
         }
         
         $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
