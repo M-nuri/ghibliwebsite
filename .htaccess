@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # Force HTTPS and canonical host for production
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} !^ghiblienergy\.ly$ [NC]
+    RewriteRule ^ https://ghiblienergy.ly%{REQUEST_URI} [L,R=301]
+
     # Redirect /api requests to Laravel public_SS (keep /api prefix)
     RewriteCond %{REQUEST_URI} ^/api
     RewriteRule ^(.*)$ /public_SS/$1 [L]
