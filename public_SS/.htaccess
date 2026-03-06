@@ -4,6 +4,7 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteBase /
 
     # ==================================================
     # Force HTTPS (ENABLE AFTER SSL IS ACTIVE)
@@ -67,9 +68,32 @@
     RewriteRule ^ %1 [L,R=301]
 
     # ==================================================
-    # Laravel Front Controller
+    # Route API requests to Laravel
     # ==================================================
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} ^/api(/|$) [NC]
     RewriteRule ^ index.php [L]
+
+    # ==================================================
+    # Route sanctum/csrf-cookie to Laravel
+    # ==================================================
+    RewriteCond %{REQUEST_URI} ^/sanctum(/|$) [NC]
+    RewriteRule ^ index.php [L]
+
+    # ==================================================
+    # Route storage requests to Laravel
+    # ==================================================
+    RewriteCond %{REQUEST_URI} ^/storage(/|$) [NC]
+    RewriteRule ^ index.php [L]
+
+    # ==================================================
+    # Serve existing files/directories directly (JS, CSS, images)
+    # ==================================================
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # ==================================================
+    # React SPA Fallback - All other routes to React
+    # ==================================================
+    RewriteRule ^ index.html [L]
 </IfModule>

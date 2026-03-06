@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block mb-8">
-              <img src={getAssetUrl('LOGO.png')} alt="Ghibli Energy" className="h-14 w-auto" />
+              <img src={getAssetUrl('logo.png')} alt="Ghibli Energy" className="h-14 w-auto" />
             </Link>
             <p className="text-neutral-400 leading-relaxed mb-8 max-w-sm">
               {language === 'ar' 

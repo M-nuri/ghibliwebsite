@@ -38,7 +38,7 @@ const Header = () => {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20 lg:h-24">
           <Link to="/" className="flex items-center group">
-            <motion.img src={getAssetUrl('LOGO.png')} alt="Ghibli Energy" className="h-12 lg:h-14 w-auto" whileHover={{ scale: 1.05 }} />
+            <motion.img src={getAssetUrl('logo.png')} alt="Ghibli Energy" className="h-12 lg:h-14 w-auto" whileHover={{ scale: 1.05 }} />
           </Link>
 
           <div className="hidden lg:flex items-center">

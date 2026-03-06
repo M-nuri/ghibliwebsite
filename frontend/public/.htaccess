@@ -1,13 +1,26 @@
 # Serve React frontend properly with Vite build
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /public/react/
+    RewriteBase /
     
-    # If a file or folder exists, serve it directly
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    
-    # Otherwise, redirect all requests to index.html for SPA routing
+    # Route API requests to Laravel (index.php)
+    RewriteCond %{REQUEST_URI} ^/api(/|$) [NC]
+    RewriteRule ^ index.php [L]
+
+    # Route sanctum/csrf-cookie to Laravel
+    RewriteCond %{REQUEST_URI} ^/sanctum(/|$) [NC]
+    RewriteRule ^ index.php [L]
+
+    # Route storage requests to Laravel
+    RewriteCond %{REQUEST_URI} ^/storage(/|$) [NC]
+    RewriteRule ^ index.php [L]
+
+    # Serve existing files directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # SPA fallback - all other requests go to index.html
     RewriteRule ^ index.html [L]
 </IfModule>
 
