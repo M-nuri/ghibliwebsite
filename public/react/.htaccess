@@ -1,13 +1,14 @@
-# Serve React frontend properly with Vite build
+# SPA fallback for React app in /public/react/
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /public/react/
-    
-    # If a file or folder exists, serve it directly
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    
-    # Otherwise, redirect all requests to index.html for SPA routing
+
+    # If a real file or directory exists, serve it directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Otherwise serve index.html for SPA routing
     RewriteRule ^ index.html [L]
 </IfModule>
 

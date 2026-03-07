@@ -61,7 +61,7 @@ const AdminLogin = () => {
             <div className="flex items-center justify-center mb-4">
               <img
                 src={getAssetUrl('logo.png')}
-                alt="The United Elite"
+                alt="Ghibli Energy"
                 className="h-16 w-auto"
               />
             </div>

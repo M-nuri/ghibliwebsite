@@ -75,10 +75,10 @@ const AdminLayout = () => {
           <Link to="/admin/dashboard" className="flex items-center gap-3">
             <img
               src={getAssetUrl('logo.png')}
-              alt="The United Elite"
+              alt="Ghibli Energy"
               className="h-10 w-auto"
             />
-            <span className="text-xl font-bold text-neutral-900 dark:text-white">Elite Admin</span>
+            <span className="text-xl font-bold text-neutral-900 dark:text-white">Admin Panel</span>
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}

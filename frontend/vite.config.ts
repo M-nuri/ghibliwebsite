@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/',
+  base: '/public/react/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -20,7 +20,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../public_SS',
-    emptyOutDir: false, // Don't wipe Laravel's index.php and other server files
+    outDir: '../public/react',
+    emptyOutDir: true,
   },
 })

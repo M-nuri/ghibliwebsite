@@ -9,7 +9,7 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/public/react">
         <App />
         <Toaster
           position="top-center"
