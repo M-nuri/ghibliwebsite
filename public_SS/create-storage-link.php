@@ -7,7 +7,7 @@
  * 
  * USAGE:
  * 1. Upload this file to your public_SS directory
- * 2. Access it via browser: https://unitedelite.ly/create-storage-link.php
+ * 2. Access it via browser: https://ghiblienergy.ly/create-storage-link.php
  * 3. Delete this file after the symlink is created!
  * 
  * IMPORTANT: Delete this file immediately after use for security!
