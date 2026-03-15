@@ -13,7 +13,7 @@ const navigation = [
   { name: 'Home', nameAr: 'الرئيسية', href: '/' },
   { name: 'About', nameAr: 'من نحن', href: '/about' },
   { name: 'Services', nameAr: 'خدماتنا', href: '/mission-vision' },
-  { name: 'Ghibli Energy - News', nameAr: 'جيبلي للطاقة - الأخبار', href: '/news' },
+  { name: 'Ghibli Energy - News', nameAr: 'قبلي للطاقة - الأخبار', href: '/news' },
 ]
 
 const Header = () => {

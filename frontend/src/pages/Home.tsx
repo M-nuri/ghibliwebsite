@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{language === 'ar' ? 'قيبلي للطاقة' : 'Ghibli Energy'} - {language === 'ar' ? 'الرئيسية' : 'Home'}</title>
+        <title>{language === 'ar' ? 'قبلي للطاقة' : 'Ghibli Energy'} - {language === 'ar' ? 'الرئيسية' : 'Home'}</title>
         <meta name="description" content={language === 'ar' ? 'شركة رائدة في مجال الطاقة' : 'A leading energy company'} />
       </Helmet>
 
@@ -50,7 +50,7 @@ const Home = () => {
                 {language === 'ar' ? 'خدمات النفط والغاز في ليبيا' : 'Libya-Based Oil & Gas Services'}
               </motion.p>
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
-                {language === 'ar' ? 'قيبلي للطاقة' : 'Ghibli Energy'}
+                {language === 'ar' ? 'قبلي للطاقة' : 'Ghibli Energy'}
               </motion.h1>
 
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-white/80 mb-4 leading-relaxed max-w-xl">

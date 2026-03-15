@@ -154,7 +154,7 @@ const Footer = () => {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-neutral-500 text-sm">
-               {currentYear} {language === 'ar' ? 'غيبلي للطاقة' : 'Ghibli Energy'}. {language === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved.'}
+               {currentYear} {language === 'ar' ? 'قبلي للطاقة' : 'Ghibli Energy'}. {language === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved.'}
             </p>
             <div className="flex items-center space-x-6 rtl:space-x-reverse">
               <p className="text-neutral-500 text-sm">{language === 'ar' ? 'ليبيا - طرابلس - حي الأندلس' : 'Libya - Tripoli - Al-Andalus District'}</p>
