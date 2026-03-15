@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{language === 'ar' ? 'غيبلي للطاقة' : 'Ghibli Energy'} - {language === 'ar' ? 'الرئيسية' : 'Home'}</title>
+        <title>{language === 'ar' ? 'قيبلي للطاقة' : 'Ghibli Energy'} - {language === 'ar' ? 'الرئيسية' : 'Home'}</title>
         <meta name="description" content={language === 'ar' ? 'شركة رائدة في مجال الطاقة' : 'A leading energy company'} />
       </Helmet>
 
