@@ -11,10 +11,10 @@ const MissionVision = () => {
   const fadeInUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }
 
   const mainServices = [
-    { icon: <BuildingOffice2Icon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? 'المشاريع الكبرى' : 'Epic Projects', description: language === 'ar' ? 'تنفيذ المشاريع الضخمة والمعقدة في قطاع الطاقة بأعلى معايير الجودة والسلامة' : 'Execution of large-scale and complex projects in the energy sector with the highest quality and safety standards', color: 'from-secondary-500 to-secondary-600' },
-    { icon: <WrenchScrewdriverIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'الصيانة' : 'Maintenance', description: language === 'ar' ? 'خدمات صيانة شاملة ووقائية لضمان استمرارية العمليات وتقليل فترات التوقف' : 'Comprehensive and preventive maintenance services to ensure operational continuity and minimize downtime', color: 'from-primary-500 to-primary-600' },
-    { icon: <TruckIcon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? 'اللوجستيات' : 'Logistics', description: language === 'ar' ? 'حلول لوجستية متكاملة لنقل المعدات والمواد بكفاءة وأمان' : 'Integrated logistics solutions for efficient and safe transportation of equipment and materials', color: 'from-secondary-500 to-secondary-600' },
-    { icon: <SparklesIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'التنظيف الصناعي' : 'Industrial Cleaning', description: language === 'ar' ? 'خدمات تنظيف صناعي متخصصة باستخدام أحدث التقنيات والمعدات' : 'Specialized industrial cleaning services using the latest technologies and equipment', color: 'from-primary-500 to-primary-600' }
+    { icon: <BuildingOffice2Icon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? ' النزاهة والتفتيش' : 'Integrity & Inspection', description: language === 'ar' ? 'حملات فحص سلامة الأصول، ودراسات التآكل، ورسم خرائط السماكة، وتحديد نطاق العمل للكشف عن العيوب في الخزانات والأوعية وخطوط الأنابيب والشبكات الميدانية. يتم استخدام أساليب فحص متقدمة عند الحاجة من خلال شريكنا المعتمد في مجال الفحص.' : 'Asset integrity campaigns, corrosion surveys, thickness mapping, and defect workscoping across tanks, vessels, pipelines, and field networks. Advanced inspection methods deployed where required through our accredited inspection partner.', color: 'from-secondary-500 to-secondary-600' },
+    { icon: <WrenchScrewdriverIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'الصيانة والإيقافات' : 'Maintenance & Shutdowns', description: language === 'ar' ? 'صيانة ميكانيكية عند الطلب للمعدات الثابتة والأنابيب والصمامات. تنفيذ حزم العمل الخاصة بالصيانة الدورية، والتنسيق في الموقع، وإدارة الملاحظات، وتوثيق التسليم. يتم تسليم جميع الأعمال ضمن نطاق أوامر العمل مع إغلاق موثق.' : 'Call-off mechanical maintenance for static equipment, piping, and valves. Turnaround workpack execution, site coordination, punch management, and handover documentation. All scopes delivered under work-order control with documented close-out.', color: 'from-primary-500 to-primary-600' },
+    { icon: <TruckIcon className="w-10 h-10 text-secondary-500" />, title: language === 'ar' ? 'E&1، أنظمة التحكم والسلامة' : 'E&1, Controls & Safety Systems', description: language === 'ar' ? 'تعديلات أنظمة التحكم الموزعة (DCS/SCADA/PLC)، ومعايرة الأجهزة، وفحص الدوائر، ودعم التشغيل. أنظمة كشف الحرائق والغازات، والاختبارات الوظيفية، والتحقق من الامتثال، والوثائق الجاهزة للتدقيق.' : 'DCS/SCADA/PLC modifications, instrumentation calibration, loop checks, and commissioning support. Fire and gas detection systems, functional testing, compliance verification, and audit-ready documentation.', color: 'from-secondary-500 to-secondary-600' },
+    { icon: <SparklesIcon className="w-10 h-10 text-primary-500" />, title: language === 'ar' ? 'خدمات المشتريات والمواقع' : 'Procurement & Site Services', description: language === 'ar' ? 'توفير المواد وتسريع عمليات التوريد، والتنسيق اللوجستي والجماركي، والمخيمات والوحدات السكنية الجاهزة، وإدارة الغازات الصناعية. القدرات الداعمة اللازمة لضمان استمرار التنفيذ بسلاسة ودون انقطاع.' : 'Materials sourcing and expediting, logistics and customs coordination, modular camps and accommodation, and industrial gas management. The supporting capabilities needed to keep execution moving without gaps.', color: 'from-primary-500 to-primary-600' }
   ]
 
   const additionalServices = [
@@ -70,7 +70,7 @@ const MissionVision = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
             <span className="badge-secondary mb-6">{language === 'ar' ? 'ما نقدمه' : 'What We Offer'}</span>
             <h2 className="section-title dark:text-white mb-6">{language === 'ar' ? 'خدماتنا الرئيسية' : 'Our Core Services'}</h2>
-            <p className="section-subtitle mx-auto">{language === 'ar' ? 'خدمات فنية شاملة لقطاع الطاقة في ليبيا' : "End-to-end technical services for Libya's energy sector"}</p>
+            <p className="section-subtitle mx-auto">{language === 'ar' ? 'خدمات متكاملة في مجال الحقول والمرافق والبنية التحتية في قطاع الطاقة الليبي.' : "Integrated field, facility, and infrastructure services across Libya's energy sector."}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -147,10 +147,10 @@ const MissionVision = () => {
 
         <div className="container-custom relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{language === 'ar' ? 'هل تبحث عن شريك موثوق في مجال الطاقة' : 'Looking for a Reliable Energy Partner?'}</h2>
-            <p className="text-xl text-white/70 mb-10 leading-relaxed">{language === 'ar' ? 'تواصل معنا اليوم لمعرفة المزيد عن خدماتنا وكيف يمكننا دعم مشاريعكم' : 'Contact us today to learn more about our services and how we can support your projects'}</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{language === 'ar' ? 'جاهزون للتعبئة' : 'Ready to Mobilise?'}</h2>
+            <p className="text-xl text-white/70 mb-10 leading-relaxed">{language === 'ar' ? 'أخبرنا بما تحتاجه وسنعود إليك بنهج منظم وعرض أسعار.' : 'Tell us what you need and we\'ll come back with a structured approach and quotation.'}</p>
             <Link to="/about" className="btn-secondary group">
-              {language === 'ar' ? 'تعرف علينا' : 'Learn About Us'}
+              {language === 'ar' ? ' إرسال طلب' : 'Send a Request'}
               <ArrowIcon className="w-5 h-5 ms-2 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
             </Link>
           </motion.div>

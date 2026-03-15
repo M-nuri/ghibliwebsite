@@ -21,10 +21,10 @@ const Footer = () => {
   ]
 
   const services = [
-    { name: 'Epic Projects', nameAr: 'المشاريع الكبرى' },
-    { name: 'Maintenance', nameAr: 'الصيانة' },
-    { name: 'Logistics', nameAr: 'اللوجستيات' },
-    { name: 'Industrial Cleaning', nameAr: 'التنظيف الصناعي' },
+    { name: 'Integrity & Inspection', nameAr: 'النزاهة والتفتيش' },
+    { name: 'Maintenance & Shutdowns', nameAr: 'الصيانة والإيقافات' },
+    { name: 'E&I, Controls & Safety', nameAr: 'الهندسة الكهربائية والأجهزة، والتحكم والسلامة' },
+    { name: 'Procurement & Site Services', nameAr: 'خدمات المشتريات والمواقع' },
   ]
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -48,8 +48,8 @@ const Footer = () => {
             </Link>
             <p className="text-neutral-400 leading-relaxed mb-8 max-w-sm">
               {language === 'ar' 
-                ? 'شركة رائدة في مجال الطاقة نقدم حلول طاقة متكاملة بأعلى معايير الجودة والسلامة'
-                : 'A leading energy company providing integrated energy solutions with the highest standards of quality and safety'}
+                ? 'خدمات متكاملة للمواقع والمرافق في قطاع الطاقة الليبي، بدءًا من السلامة والصيانة وصولاً إلى المشتريات والبنية التحتية للمواقع.'
+                : 'Integrated field and facility services across Libya\'s energy sector, from integrity and maintenance to procurement and site infrastructure.'}
             </p>
             <div className="flex space-x-3 rtl:space-x-reverse">
               {settings.social_facebook && (
@@ -112,18 +112,39 @@ const Footer = () => {
                   <span className="text-neutral-400 text-sm leading-relaxed pt-2">{language === 'ar' ? settings.contact_address_ar : settings.contact_address}</span>
                 </li>
               )}
-              <li className="flex items-center space-x-4 rtl:space-x-reverse group">
-                <div className="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary-500/20 transition-colors">
-                  <PhoneIcon className="w-5 h-5 text-secondary-500" />
-                </div>
-                <a href="tel:+218917485275" className="text-neutral-400 hover:text-secondary-400 transition-colors" dir="ltr">+218 91 748 5275</a>
-              </li>
-              <li className="flex items-center space-x-4 rtl:space-x-reverse group">
-                <div className="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary-500/20 transition-colors">
-                  <EnvelopeIcon className="w-5 h-5 text-secondary-500" />
-                </div>
-                <a href="mailto:info@ghiblienergy.ly" className="text-neutral-400 hover:text-secondary-400 transition-colors">info@ghiblienergy.ly</a>
-              </li>
+             <li className="flex items-center space-x-4 rtl:space-x-reverse group">
+  <div className="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary-500/20 transition-colors">
+    <PhoneIcon className="w-5 h-5 text-secondary-500" />
+  </div>
+  <a href="tel:+218917485275" className="text-neutral-400 hover:text-secondary-400 transition-colors" dir="ltr">
+    +218 91 748 5275
+  </a>
+</li>
+
+<li className="flex items-center space-x-4 rtl:space-x-reverse group">
+  <div className="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary-500/20 transition-colors">
+    <EnvelopeIcon className="w-5 h-5 text-secondary-500" />
+  </div>
+  <a href="mailto:info@ghiblienergy.ly" className="text-neutral-400 hover:text-secondary-400 transition-colors">
+    info@ghiblienergy.ly
+  </a>
+</li>
+
+<li className="flex items-center space-x-4 rtl:space-x-reverse group">
+  <div className="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary-500/20 transition-colors">
+    <svg className="w-5 h-5 text-secondary-500" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.86 3.36-1.86 3.6 0 4.26 2.37 4.26 5.45v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.11 20.45H3.57V9h3.54v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+    </svg>
+  </div>
+  <a 
+    href="https://ly.linkedin.com/company/ghiblienergy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-neutral-400 hover:text-secondary-400 transition-colors"
+  >
+    LinkedIn
+  </a>
+</li>
             </ul>
           </div>
         </div>
